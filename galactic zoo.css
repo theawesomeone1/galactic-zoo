@@ -1,0 +1,101 @@
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  position: relative;
+  background-image: url("galactic zoo assets/freaky freak zoo exterior.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+h2,
+h3 {
+  text-align: center;
+  color: deeppink;
+  font-family: "Courier New", Courier, monospace;
+  -webkit-text-stroke: 0.03vh white;
+}
+
+.door {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  border: solid 0.3vh rgb(168, 249, 29);
+  background: rgba(168, 249, 29, 0.3);
+
+  width: 8vh;
+  height: 16vh;
+  bottom: 50%;
+  left: 50%;
+
+  text-decoration: none;
+
+  transform: translate(-25%, 55%);
+  scale: 1;
+
+  box-shadow: 0 0 20px yellowgreen;
+
+  transition: scale 1s ease-in-out, box-shadow 1s ease-in-out;
+}
+
+/* Continuous pulsing animation */
+@keyframes pulse {
+  0%, 100% {
+    scale: 1;
+  }
+
+  50% {
+    scale: 1.07;
+  }
+}
+
+.pulse {
+  animation: pulse 6s ease-in-out infinite;
+}
+
+.door:hover {
+      box-shadow: 0 0 40px greenyellow;
+}
+
+/* Door text */
+.door p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: deeppink;
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+
+  text-align: center;
+  -webkit-text-stroke: 0.03vh white;
+
+  width: 100%;
+  height: 100%;
+  padding: 2vh;
+
+  font-size: 2.4vh;
+  line-height: 3vh;
+}
+
+/* Tablet and mobile */
+@media (max-width: 1024px) {
+  .door {
+    box-shadow: 0 0 20px yellowgreen;
+  }
+
+  .door:active {
+    box-shadow: 0 0 40px greenyellow;
+    scale: 1.05;
+  }
+}

@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("galactic zoo assets/freaky freak zoo interior background.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+}
+
+.interior-header {
+  display: flex;
+  gap: 5vh;
+  flex-direction: column;
+  align-items: center;
+}
+.zoo-interior {
+  background-image: url("galactic zoo assets/freaky freak zoo interior.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  overflow: visible;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 10vw;
+  top: 15vh;
+  width: 80vw;
+  height: 80vh;
+}
+
+.guy {
+  position: absolute;
+  border: solid 0.3vh rgb(168, 249, 29);
+  background: rgba(168, 249, 29, 0.3);
+  width: 45%;
+  height: 85%;
+  bottom: 5%;
+  left: 5%;
+  transition: 0.6s;
+  text-decoration: none;
+  box-shadow: 0px 0px 40px yellowgreen;
+}
+
+.guy p {
+  color: deeppink;
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+  justify-content: center;
+  text-align: center;
+  -webkit-text-stroke: 0.03vh white;
+  width: 100%;
+  height: 100%;
+  padding: 10%;
+  padding-top: 50%;
+  font-size: 250%;
+  line-height: 120%;
+}
+
+.guy:active {
+  box-shadow: 0px 0px 50px greenyellow;
+  transform: translateY(-1%) scale(1.05);
+}
+
+.zoo-instructions {
+  position: absolute;
+  left: 55%;
+  right: 5%;
+  bottom: 45px;
+  display: flex;
+  font-size: 80%;
+  flex-direction: column;
+  gap: 2vh;
+  color: white;
+  -webkit-text-stroke: 0.05vh deeppink;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.ipad-content {
+  display: none;
+  overflow: hidden;
+}
+
+@media (min-width: 300px) and (orientation: landscape) {
+  .zoo-interior {
+    left: 25vw;
+    top: 15vh;
+    width: 50vw;
+    height: 80vh;
+  }
+
+  .guy {
+    width: 30%;
+    height: 85%;
+    bottom: 5%;
+    left: 12.5%;
+  }
+
+  .guy p {
+    -webkit-text-stroke: 0.03vh white;
+    width: 100%;
+    height: 100%;
+    padding: 10%;
+    padding-top: 20%;
+    font-size: 215%;
+    line-height: 120%;
+  }
+
+  .guy:active {
+    box-shadow: 0px 0px 50px greenyellow;
+    transform: translateY(-1%) scale(1.05);
+  }
+
+  .zoo-instructions {
+    left: 45%;
+    right: 0%;
+    bottom: 25px;
+    font-size: 80%;
+    gap: 5vh;
+    -webkit-text-stroke: 0.1vh deeppink;
+  }
+
+  @media (max-width: 755px) {
+    .zoo-instructions {
+      font-size: 70%;
+    }
+
+    h3 {
+      font-size: 125%;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 5vh;
+  }
+
+  .ipad-content {
+    content: "Tap here for bonus ipad content";
+    text-decoration: underline;
+    font-style: italic;
+    font-size: 2vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ipad-content:hover {
+    cursor: pointer;
+  }
+  .zoo-interior {
+    left: 5vw;
+    top: 20vh;
+    width: 90vw;
+    height: 75vh;
+  }
+
+  .guy {
+    width: 30%;
+    height: 85%;
+    bottom: 5%;
+    left: 12.5%;
+  }
+
+  .guy p {
+    -webkit-text-stroke: 0.03vh white;
+    width: 100%;
+    height: 100%;
+    padding: 10%;
+    padding-top: 20%;
+    font-size: 300%;
+    line-height: 120%;
+  }
+
+  .guy:active {
+    box-shadow: 0px 0px 50px greenyellow;
+    transform: translateY(-1%) scale(1.05);
+  }
+
+  .zoo-instructions {
+    left: 45%;
+    right: 0%;
+    bottom: 25px;
+    font-size: 80%;
+    gap: 5vh;
+    -webkit-text-stroke: 0.1vh deeppink;
+  }
+}
